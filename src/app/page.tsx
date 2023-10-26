@@ -24,27 +24,52 @@ export default function Home() {
     setOld_cur(currentCurrency);
     setNew_cur(currencyWanted);
     console.log(value, currentCurrency, currencyWanted);
+    getData(currentCurrency, currencyWanted, value);
   };
 
-  useEffect(() => {
+  const getData = (
+    currentCurrency: string,
+    currencyWanted: string,
+    value: number
+  ) => {
     const options = {
       method: "GET",
       headers: {
         "x-rapidapi-key": "af717a7493mshc01c20613ca1544p1e2c2cjsn1d32fd48ed50",
       },
     };
+    const url = `https://currency-converter-by-api-ninjas.p.rapidapi.com/v1/convertcurrency?have=${currentCurrency}&want=${currencyWanted}&amount=${value}`;
 
-    fetch(
-      "https://currency-converter-by-api-ninjas.p.rapidapi.com/v1/convertcurrency?have=USD&want=EUR&amount=5000",
-      options
-    )
+    fetch(url, options)
       .then((response) => response.json())
       .then((response) => {
         console.log(response);
         setValor(response);
       })
       .catch((err) => console.error(err));
-  }, []);
+  };
+
+  // useEffect(() => {
+
+  //   const options = {
+  //     method: "GET",
+  //     headers: {
+  //       "x-rapidapi-key": "af717a7493mshc01c20613ca1544p1e2c2cjsn1d32fd48ed50",
+  //     },
+  //   };
+
+  //   fetch(
+  //     `https://currency-converter-by-api-ninjas.p.rapidapi.com/v1/convertcurrency?have=USD&want=EUR&amount=5000`,
+  //     options
+  //   )
+  //     .then((response) => response.json())
+  //     .then((response) => {
+  //       console.log(response);
+  //       console.log(old_cur);
+  //       setValor(response);
+  //     })
+  //     .catch((err) => console.error(err));
+  // }, []);
 
   return (
     <div className=" h-screen">

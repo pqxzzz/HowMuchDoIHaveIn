@@ -24,7 +24,7 @@ const Header: React.FC<HeaderProps> = ({ onCheckHowMuch }) => {
   };
 
   return (
-    <div className="my-5 mx-2 flex flex-col justify-center items-center">
+    <div className="my-5 mt-10  mx-2 flex flex-col justify-center items-center">
       <h1 className=" text-center font-bold text-3xl ">
         How Much Do I Have In
         <input
