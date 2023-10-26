@@ -2,26 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html {
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.my-custom-class {
+  --s: 50px;
+  --c: #191b22;
+  --_s: calc(2 * var(--s)) calc(2 * var(--s));
+  --_g: 35.36% 35.36% at;
+  --_c: #00000000 66%, #374238 68% 70%, #0000 72%;
+  background: radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s) /
+      var(--_s),
+    radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s) / var(--_s),
+    radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0 / var(--_s),
+    radial-gradient(var(--_g) 0 75%, var(--_c)) 0 0 / var(--_s),
+    repeating-conic-gradient(var(--c) 0 25%, #0000 0 50%) 0 0 / var(--_s),
+    radial-gradient(var(--_c)) 0 calc(var(--s) / 2) / var(--s) var(--s) var(--c);
+  background-attachment: fixed;
 }
