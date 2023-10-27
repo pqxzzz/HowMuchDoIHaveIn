@@ -2,20 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
+.ShadowFont {
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
 }
-.my-custom-class {
-  --s: 50px;
-  --c: #191b22;
-  --_s: calc(2 * var(--s)) calc(2 * var(--s));
-  --_g: 35.36% 35.36% at;
-  --_c: #00000000 66%, #374238 68% 70%, #0000 72%;
-  background: radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s) /
-      var(--_s),
-    radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s) / var(--_s),
-    radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0 / var(--_s),
-    radial-gradient(var(--_g) 0 75%, var(--_c)) 0 0 / var(--_s),
-    repeating-conic-gradient(var(--c) 0 25%, #0000 0 50%) 0 0 / var(--_s),
-    radial-gradient(var(--_c)) 0 calc(var(--s) / 2) / var(--s) var(--s) var(--c);
-  background-attachment: fixed;
+.BoxShadow {
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+}
+.BoxShadow2 {
+  box-shadow: 4px 4px 1px rgba(0, 0, 0, 0.5);
+}
+
+html {
+  background: linear-gradient(-45deg, #242624, #194219, #242424, #2f462f);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

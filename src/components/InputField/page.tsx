@@ -23,9 +23,9 @@ const InputField: React.FC<InputProps> = ({ onCheck }) => {
       onSubmit={handleSubmit}
       className="flex flex-col justify-center items-center"
     >
-      <div className=" flex p-2">
+      <div className=" flex justify-center items-center p-2">
         <input
-          className="border appearance-none border-green-500 rounded w-[200px] text-2xl px-2 mx-3"
+          className=" border appearance-none border-yellow-800 rounded w-1/3 py-2 text-center text-2xl px-2 mx-3"
           placeholder="Amount"
           value={amount}
           onChange={(e) => setAmount(parseInt(e.target.value))}
@@ -33,8 +33,8 @@ const InputField: React.FC<InputProps> = ({ onCheck }) => {
         />
 
         <input
-          placeholder="___"
-          className="border  border-green-500 rounded font-bold w-[50px] text-center"
+          placeholder="USD"
+          className="border text-2xl  border-yellow-800 rounded py-2 outline-none w-1/6 text-center"
           type="text"
           value={currentCurrency}
           onChange={(e) => setCurrentCurrency(e.target.value)}
@@ -43,7 +43,7 @@ const InputField: React.FC<InputProps> = ({ onCheck }) => {
       </div>
 
       <button
-        className="bg-green-400 px-3 py-2 w-fit mt-3 rounded-sm font-bold text-green-900 hover:bg-green-500 hover:text-emerald-900"
+        className=" BoxShadow rounded-md bg-white  px-4 py-3 w-fit mt-3 font-bold text-yellow-900 hover:bg-yellow-200 hover:text-yellow-900"
         type="submit"
       >
         Check
