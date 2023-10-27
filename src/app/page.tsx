@@ -73,7 +73,9 @@ export default function Home() {
                 ${valor?.old_amount.toFixed(2)}
               </h1>
               {/* <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg> */}
-              <h1 className="text-white font-bold text-3xl ml-2"> &gt; </h1>
+              <h1 className="text-white font-bold text-3xl ml-2 hidden sm:block">
+                =
+              </h1>
               <h1 className="bg-green-500 mx-3 px-2 py-1 rounded-md font-bold text-2xl text-white">
                 {valor?.new_currency}
               </h1>
@@ -83,7 +85,7 @@ export default function Home() {
             </div>
 
             {/* --- */}
-            <div className="flex justify-center items-center">
+            <div className="">
               {/* OLD VALUES */}
               {/* <div className="container mx-auto flex justify-center my-2 items-center ">
                 <h2 className="bg-red-500 mx-3 px-2 py-1 rounded-md font-bold text-2xl text-white">
@@ -105,8 +107,8 @@ export default function Home() {
 
               {/* --- */}
             </div>
-            <div>
-              <h1 className=" ShadowFont flex justify-center items-center text-3xl text-white font-bold text-center mt-3">
+            <div className="flex items-center justify-center flex-col sm:flex-row text-xl sm:text-3xl">
+              <h1 className=" ShadowFont flex justify-center items-center  text-white font-bold text-center mt-3">
                 You have $
                 <span
                   className={`${
@@ -118,7 +120,7 @@ export default function Home() {
                   {valor.new_amount.toFixed(2)}
                 </span>
                 in
-                <h1 className=" px-2 py-1 rounded-md font-bold text-3xl text-white">
+                <h1 className=" px-2 py-1 rounded-md font-bold text-white">
                   {valor?.new_currency}
                 </h1>
               </h1>
