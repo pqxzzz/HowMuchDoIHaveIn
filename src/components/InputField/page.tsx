@@ -25,7 +25,7 @@ const InputField: React.FC<InputProps> = ({ onCheck }) => {
     >
       <div className=" flex flex-col justify-center items-center p-2 sm:flex-row">
         <input
-          className=" border h-[2rem] border-yellow-800 rounded w-1/2 mb-2  text-center text-2xl px-2 mx-3 sm:w-1/3  "
+          className=" border h-[2rem] border-yellow-800 rounded w-1/2  text-center text-2xl px-2 mx-3 sm:w-1/3  "
           placeholder="Amount"
           value={amount}
           onChange={(e) => setAmount(parseInt(e.target.value))}
