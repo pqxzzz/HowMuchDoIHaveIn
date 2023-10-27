@@ -1,5 +1,7 @@
 ## This is a personal project created for studying, utilizing knowledge in `HTML, CSS, JavaScript, ReactJS, NextJS, and Tailwind CSS`.
 
+#check the App in [HowMuchDoIHaveIn](https://howmuchdoihavein.vercel.app/)
+
 In this project, you choose which currency you want in the title 'How Much do I Have In \_\_\_,' and just below, you select the amount and the currency you currently have.
 
 The API that this application queries is: [RapidAPICurrencyConverter](https://rapidapi.com/apininjas/api/currency-converter-by-api-ninjas).
