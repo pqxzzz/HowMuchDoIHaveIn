@@ -13,12 +13,6 @@ type HeaderProps = {
 const Header: React.FC<HeaderProps> = ({ onCheckHowMuch }) => {
   const [currencyWanted, setCurrencyWanted] = useState("");
 
-  // const CheckHowMuch = (
-  //   value: number,
-  //   currentCurrency: string,
-  //   currencyWanted: string
-  // ) => {};
-
   const handleCheck = (value: number, currentCurrency: string) => {
     onCheckHowMuch(value, currentCurrency, currencyWanted);
   };
