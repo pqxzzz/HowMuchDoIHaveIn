@@ -1,7 +1,6 @@
 "use client";
 import Header from "@/components/Header/page";
 import { useEffect, useState } from "react";
-import arrow from "../assets/arrow.png";
 
 type Props = {
   new_amount: number;
